@@ -28,8 +28,6 @@ class NameDeduplicator:
         self.conn = sqlite3.connect('deduplicated_authors.db')
         self.create_database()
         self.person_df = person_df
-        if self.person_df is not None:
-            self.preprocess_data()
         self.db_path = 'deduplicated_authors.db'
         try:
             self.conn = sqlite3.connect(self.db_path)
